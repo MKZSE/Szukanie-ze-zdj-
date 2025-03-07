@@ -1,0 +1,26 @@
+﻿<Window x:Class="szukaniewzorca.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="OCR Faktur" Height="450" Width="600">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+       
+        <StackPanel Orientation="Horizontal" Grid.Row="0" Margin="0,0,0,10">
+            <Button Name="btnSelectFolder" Width="120" Click="btnSelectFolder_Click">Wybierz folder</Button>
+            <TextBox Name="txtFolderPath" Width="400" Margin="10,0,0,0" IsReadOnly="True"/>
+        </StackPanel>
+
+        
+        <StackPanel Orientation="Horizontal" Grid.Row="1" Margin="0,0,0,10">
+            <Button Name="btnStartOcr" Width="120" Click="btnStartOcr_Click">Rozpocznij OCR</Button>
+        </StackPanel>
+
+        
+        <ListBox Name="lstResults" Grid.Row="2"/>
+    </Grid>
+</Window>
