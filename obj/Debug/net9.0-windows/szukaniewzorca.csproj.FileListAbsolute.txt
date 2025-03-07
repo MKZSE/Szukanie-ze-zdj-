@@ -24,3 +24,8 @@ C:\Users\kompc\Desktop\szukaniewzorca\obj\Debug\net9.0-windows\refint\szukaniewz
 C:\Users\kompc\Desktop\szukaniewzorca\obj\Debug\net9.0-windows\szukaniewzorca.pdb
 C:\Users\kompc\Desktop\szukaniewzorca\obj\Debug\net9.0-windows\szukaniewzorca.genruntimeconfig.cache
 C:\Users\kompc\Desktop\szukaniewzorca\obj\Debug\net9.0-windows\ref\szukaniewzorca.dll
+C:\Users\kompc\Desktop\szukaniewzorca\bin\Debug\net9.0-windows\Aspose.PDF.dll
+C:\Users\kompc\Desktop\szukaniewzorca\bin\Debug\net9.0-windows\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\kompc\Desktop\szukaniewzorca\bin\Debug\net9.0-windows\Microsoft.Extensions.DependencyModel.dll
+C:\Users\kompc\Desktop\szukaniewzorca\bin\Debug\net9.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\kompc\Desktop\szukaniewzorca\bin\Debug\net9.0-windows\Newtonsoft.Json.dll

@@ -7,10 +7,6 @@
       "RelativeMoniker": "D:0:0:{A93EE447-E54C-4A69-BB3B-A794FF42BAB3}|szukaniewzorca.csproj|solutionrelative:mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A93EE447-E54C-4A69-BB3B-A794FF42BAB3}|szukaniewzorca.csproj|c:\\users\\kompc\\desktop\\szukaniewzorca\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A93EE447-E54C-4A69-BB3B-A794FF42BAB3}|szukaniewzorca.csproj|solutionrelative:app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A93EE447-E54C-4A69-BB3B-A794FF42BAB3}|szukaniewzorca.csproj|c:\\users\\kompc\\desktop\\szukaniewzorca\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{A93EE447-E54C-4A69-BB3B-A794FF42BAB3}|szukaniewzorca.csproj|solutionrelative:mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     }
@@ -22,24 +18,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "App.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\kompc\\Desktop\\szukaniewzorca\\App.xaml.cs",
-              "RelativeDocumentMoniker": "App.xaml.cs",
-              "ToolTip": "C:\\Users\\kompc\\Desktop\\szukaniewzorca\\App.xaml.cs",
-              "RelativeToolTip": "App.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-07T09:24:32.448Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "C:\\Users\\kompc\\Desktop\\szukaniewzorca\\MainWindow.xaml",
               "RelativeDocumentMoniker": "MainWindow.xaml",
@@ -57,7 +40,7 @@
               "RelativeDocumentMoniker": "MainWindow.xaml.cs",
               "ToolTip": "C:\\Users\\kompc\\Desktop\\szukaniewzorca\\MainWindow.xaml.cs",
               "RelativeToolTip": "MainWindow.xaml.cs",
-              "ViewState": "AgIAACYAAAAAAAAAAAAgwBMAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAIAAAAAAAAAAAAAiwJoAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-07T08:22:03.87Z",
               "EditorCaption": ""
