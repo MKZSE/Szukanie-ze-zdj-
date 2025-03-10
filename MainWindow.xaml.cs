@@ -125,34 +125,24 @@ namespace szukaniewzorca
                                 lstResults.Items.Add($"   Numer faktury: {m.Value}");
                             }
 
-                            // Szukanie frazy "data wystawienia"
-                            var dataWystawieniaMatch = Regex.Match(ocrText, @"DATA WYSTAWIENIA");
-                            if (dataWystawieniaMatch.Success)
+                            // Szukanie frazy "DATA WYSTAWIENIA" oraz daty w jednym wyrażeniu regularnym
+                            // To wyrażenie zakłada, że między frazą a datą mogą wystąpić spacje, dwukropki lub myślniki
+                            // i próbuje wyłapać datę w formacie dd-mm-yyyy, dd.mm.yyyy lub yyyy-mm-dd, yyyy.mm.dd
+                            var dataRegex = new Regex(
+                                @"DATA\s*WYSTAWIENIA\s*[:\-]?\s*(?<data>(\d{2}[-.]\d{2}[-.]\d{4}|\d{4}[-.]\d{2}[-.]\d{2}))",
+                                RegexOptions.IgnoreCase);
+
+                            var dataMatch = dataRegex.Match(ocrText);
+                            if (dataMatch.Success)
                             {
-                                // Znalezienie daty w pobliżu napisu "data wystawienia" (np. do 50 znaków po frazie)
-                                int startIndex = dataWystawieniaMatch.Index + dataWystawieniaMatch.Length;
-                                string substringAfterDataWystawienia = ocrText.Substring(startIndex, Math.Min(50, ocrText.Length - startIndex)); // Ograniczysz długość przeszukiwanego tekstu
-
-                                // Szukaj daty tylko w tej części tekstu
-                                var dateMatches1 = Regex.Matches(substringAfterDataWystawienia, datePattern1);
-                                var dateMatches2 = Regex.Matches(substringAfterDataWystawienia, datePattern2);
-                                var dateMatches3 = Regex.Matches(substringAfterDataWystawienia, datePattern3);
-
-                                // Wypisz znalezione daty
-                                foreach (Match date in dateMatches1)
-                                {
-                                    lstResults.Items.Add($"   Data: {date.Value}");
-                                }
-                                foreach (Match date in dateMatches2)
-                                {
-                                    lstResults.Items.Add($"   Data: {date.Value}");
-                                }
-                                foreach (Match date in dateMatches3)
-                                {
-                                    lstResults.Items.Add($"   Data: {date.Value}");
-                                }
+                                string dataWystawienia = dataMatch.Groups["data"].Value;
+                                lstResults.Items.Add($"   Data wystawienia: {dataWystawienia}");
                             }
-                           
+                            else
+                            {
+                                // Jeśli nie znaleziono daty za pomocą jednego wyrażenia, można rozważyć wyszukiwanie w szerszym fragmencie tekstu
+                                lstResults.Items.Add("   Data wystawienia: nie znaleziono");
+                            }
                         }
                     }
                 }
@@ -162,6 +152,7 @@ namespace szukaniewzorca
                 lstResults.Items.Add($"Błąd pliku {Path.GetFileName(imageFilePath)}: {exFile.Message}");
             }
         }
+
 
 
     }

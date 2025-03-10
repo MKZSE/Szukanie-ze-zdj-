@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("szukaniewzorca")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+28e25ba880790972cad3d8d889d2c76589c45524")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e715be976a1cb8508ab93223aff848abc08cca8f")]
 [assembly: System.Reflection.AssemblyProductAttribute("szukaniewzorca")]
 [assembly: System.Reflection.AssemblyTitleAttribute("szukaniewzorca")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
