@@ -40,10 +40,10 @@ namespace szukaniewzorca
 
             string tessDataPath = @"C:\Program Files\Tesseract-OCR\tessdata";
 
-            // Wzorzec dla numeru faktury (przynajmniej dwa slashe)
+           
             string invoicePattern = @"[A-Za-z0-9]+(?:\/[A-Za-z0-9]+){2,}";
 
-            // Wzorzec dla daty w jednym z czterech określonych formatów
+           
             string datePattern1 = @"(?:\d{2}[-.]\d{2}[-.]\d{4})"; // dd-mm-yyyy lub dd.mm.yyyy
             string datePattern2 = @"(?:\d{2}[-.]\d{4}[-.]\d{2})"; // mm-dd-yyyy lub mm.dd.yyyy
             string datePattern3 = @"(?:\d{4}[-.]\d{2}[-.]\d{2})"; // yyyy-mm-dd lub yyyy.mm.dd
@@ -61,10 +61,10 @@ namespace szukaniewzorca
                         {
                             // Konwertuj PDF na obrazy
                             string imageFolder = Path.Combine(folderPath, Path.GetFileNameWithoutExtension(filePath));
-                            Directory.CreateDirectory(imageFolder); // Utwórz folder na obrazy, jeśli nie istnieje
+                            Directory.CreateDirectory(imageFolder); 
                             ConvertPdfToImages(filePath, imageFolder);
 
-                            // Przeprowadz OCR na wygenerowanych obrazach
+                            
                             var imageFiles = Directory.GetFiles(imageFolder);
                             foreach (var imageFile in imageFiles)
                             {
@@ -125,9 +125,7 @@ namespace szukaniewzorca
                                 lstResults.Items.Add($"   Numer faktury: {m.Value}");
                             }
 
-                            // Szukanie frazy "DATA WYSTAWIENIA" oraz daty w jednym wyrażeniu regularnym
-                            // To wyrażenie zakłada, że między frazą a datą mogą wystąpić spacje, dwukropki lub myślniki
-                            // i próbuje wyłapać datę w formacie dd-mm-yyyy, dd.mm.yyyy lub yyyy-mm-dd, yyyy.mm.dd
+                           
                             var dataRegex = new Regex(
                                 @"DATA\s*WYSTAWIENIA\s*[:\-]?\s*(?<data>(\d{2}[-.]\d{2}[-.]\d{4}|\d{4}[-.]\d{2}[-.]\d{2}))",
                                 RegexOptions.IgnoreCase);
@@ -140,7 +138,7 @@ namespace szukaniewzorca
                             }
                             else
                             {
-                                // Jeśli nie znaleziono daty za pomocą jednego wyrażenia, można rozważyć wyszukiwanie w szerszym fragmencie tekstu
+                                
                                 lstResults.Items.Add("   Data wystawienia: nie znaleziono");
                             }
                         }
